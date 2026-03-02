@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de plantilla</title>
+</head>
+<body>
+    {% include 'menu.html' %}
+    <h1>LISTADO DE PLATILLA</h1>
+    <br><br>
+    <table border="1">
+        <tr>
+            <td>HOSPITAL</td>
+            <td>SALA</td>
+            <td>EMPLEADO</td>
+            <td>APELLIDO</td>
+            <td>FUNCION</td>
+            <td>TURNO</td>
+            <td>SALARIO</td>
+        </tr>
+            {% for dato in plantilla %}
+        <tr>
+            <td>{{dato.hcod}}</td>
+            <td>{{dato.scod}}</td>
+            <td>{{dato.empno}}</td>
+            <td>{{dato.apellido}}</td>
+            <td>{{dato.funcion}}</td>
+            <td>{{dato.turno}}</td>
+            <td>{{dato.salario}}</td>
+        </tr>
+            {% endfor %}
+
+    </table>
+</body>
+</html>
