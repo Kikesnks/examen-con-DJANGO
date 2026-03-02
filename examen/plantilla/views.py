@@ -11,5 +11,4 @@ def plantilla(request):
     informacion = {
         "plantilla": lista
     }
-    print (lista)
     return render(request, 'plantilla.html', informacion)
